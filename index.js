@@ -21,11 +21,12 @@ app.get('/', async (req, res) => {
     //openweather call to get weather data for the address
     const weatherResponse = await axios.get(`${weatherURL}?lat=${location.lat}&lon=${location.lon}&units=${unitsType}&appid=${process.env.WEATHER_API_KEY}`);
     const weather = weatherResponse.data;
+    console.log(weather.data[0]);
+    res.render('index.ejs', weather.data[0]);
   } catch (error) {
     console.log(error.response?.data || error.message);
-    return res.sendStatus(500);
+    res.render('index.ejs');
   }
-  res.render('index.ejs');
 })
 
 app.listen(PORT, () => {
