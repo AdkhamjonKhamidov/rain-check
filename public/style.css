@@ -1,6 +1,63 @@
 .background_color_light {
-    background-color: #FCF9EA;
+    background-color: #3368A0;
 }
-.text_color {
-    color: #97A87A;
+/* color pallet
+    color: #97A87A;  swamp gree 
+    color: #DB9558;  orange
+    color: #FCF9EA;  tan
+    color: #A8BBA3;  sage green
+    color: #F2EFE7;  dark blue
+*/
+h1 {
+    color: #F2EFE7;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: clamp(2rem, 1.5rem + 3vw, 4rem);
+}
+
+.header {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+.title {
+    flex-basis: 1;
+    max-width: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #66A3BF;
+    color: #F2EFE7;
+    border: 1px solid #F2EFE7; 
+    border-radius: 6px;
+    font-size: clamp(1rem, 0.5rem + 3vw, 2rem);
+    margin: 1%; 
+}
+
+.animate_button_click {
+    animation: popEffect 0.3s ease-in-out;
+}
+
+@keyframes popEffect {
+    0% {
+        transform: scale(1);
+        background-color: #3368A0;
+        border-color: #66A3BF;
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

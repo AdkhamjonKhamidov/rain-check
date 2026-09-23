@@ -21,7 +21,6 @@ app.get('/', async (req, res) => {
     //openweather call to get weather data for the address
     const weatherResponse = await axios.get(`${weatherURL}?lat=${location.lat}&lon=${location.lon}&units=${unitsType}&appid=${process.env.WEATHER_API_KEY}`);
     const weather = weatherResponse.data;
-    console.log(weather);
   } catch (error) {
     console.log(error.response?.data || error.message);
     return res.sendStatus(500);
