@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
     const weatherResponse = await axios.get(`${weatherURL}?lat=${location.lat}&lon=${location.lon}&units=${unitsType}&appid=${process.env.WEATHER_API_KEY}`);
     const weather = weatherResponse.data;
     console.log(weather.data[0]);
-    res.render('index.ejs', weather.data[0]);
+    res.render('index.ejs', {weather: weather.data[0]});
   } catch (error) {
     console.log(error.response?.data || error.message);
     res.render('index.ejs');
