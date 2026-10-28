@@ -61,3 +61,18 @@ button {
         transform: scale(1);
     }
 }
+
+.weather_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #F2EFE7;
+    font-size: clamp(1rem, 0.5rem + 3vw, 2rem);
+    margin: 1%; 
+    border: 1px solid #F2EFE7; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}

@@ -32,6 +32,10 @@
 
     <div class="weather_body">
         <p>Temperature: <span class="temp"><%= weather.temp %></span> &deg;<span class="unit">C</span></p>
+        <p>Feels like: <span class="temp"><%= weather.feels_like %></span> &deg;<span class="unit">C</span></p>
+        <p>Humidity: <%= weather.humidity %>%</p>
+        <p>UVI: <%= weather.uvi %></span></p>
+        <p>Today's forecast: <%= weather.weather[0].description %></span></p>
     </div>
 
     <script src="/main.js" defer></script>
